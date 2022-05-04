@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
+import CardContainer from './components/CardContainer/CardContainer';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+        <CardContainer/>
     </div>
   );
 }

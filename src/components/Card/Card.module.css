@@ -1,0 +1,28 @@
+.card {
+    background: url(https://power.cloud/wp-content/uploads/2020/09/pc-home-box-bg-lieferant-verlauf_60percent_v02.min_.svg) bottom right no-repeat, linear-gradient(to bottom right,#ffd640,#ffcc12);
+    background-size: cover;
+    padding: 64px 32px 300px 32px;
+    flex: 1 1 0px;
+    flex-wrap:wrap;
+}
+.card:nth-child(2){
+    background: url(https://power.cloud/wp-content/uploads/2020/09/pc-home-box-bg-messstellenbetreiber_60percent_v02.min_.svg) bottom right no-repeat , linear-gradient(to bottom right,#ffd640,#ffcc12);
+    background-size: cover;
+}
+.card:nth-child(3){
+    background: url(https://power.cloud/wp-content/uploads/2020/09/pc-home-box-bg-netzbetreiber_60percent_v02.min_.svg) bottom right no-repeat , linear-gradient(to bottom right,#ffd640,#ffcc12);
+    background-size: cover;
+}
+
+a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+a:after {
+    content: '>';
+    font-weight: bold;
+    margin-left: 5px;
+}
+
