@@ -16,15 +16,24 @@
 .fa-stack{
     background-color: black;
 }
+.pCopyright{
+color: white;
+}
 
 .pTag{
-    color: white;
+    color: rgb(247, 204, 59);
+    font-weight: bold
+}
+.square{
+    color: rgb(247, 204, 59);
+    /*background-color: rgb(247, 204, 59);*/
+
 }
 .icon{
     /*fa-2x;*/
     /*padding-right: 16px!important;*/
     font-family: "Font Awesome 6 Brands";
     font-weight: 200;
-    background-color: rgb(247, 204, 59);
+
     color: black;
 }
