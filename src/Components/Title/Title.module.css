@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 
 .Title{
     height: auto;
-    padding: 2em;
+    padding: 32px;
     display: inline-block;
     vertical-align: top;
 }
@@ -19,7 +19,6 @@
     background:#ffd334;
     position: absolute;
     top:-15px;
-    left: 0px;
 }
 .Text {
     font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
