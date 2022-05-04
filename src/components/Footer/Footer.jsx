@@ -10,58 +10,58 @@ export default function Footer() {
         <div className={styles.footer}>
 
 
-            Footer
-
             <p className={styles.pCopyright}>&copy; {new Date(2012, 1, 1).getFullYear()}-{new Date().getFullYear()} powercloud
                 GmbH, Offenburg.</p>
 
-            <a href="">
-                <p className={styles.pTag}>Impressum</p>
-            </a>
-            <a href="">
-                <p className={styles.pTag}>Datenschutz</p>
+            <div className={styles.animatedLinks}>
+                <a href="">
+                    Impressum
+                </a>
+                <a href="">
+                    Datenschutz
+                </a>
+            </div>
 
-            </a>
-
-            <a href="">
+            <div className={styles.socialMediaLinks}>
+                <a href="">
                 <span className="fa-stack fa-2x">
                     <i className={`${styles.square} fa-solid fa-square fa-stack-2x`}></i>
                     <i className={`${styles.icon} fa-brands fa-facebook-f fa-stack-1x fa-inverse`}></i>
                 </span>
-            </a>
-            <a href="">
+                </a>
+                <a href="">
                 <span className="fa-stack fa-2x">
                     <i className={`${styles.square} fa-solid fa-square fa-stack-2x`}></i>
                     <i className={`${styles.icon} fa-brands fa-xing fa-stack-1x fa-inverse`}></i>
                 </span>
-            </a>
-            <a href="">
+                </a>
+                <a href="">
                 <span className="fa-stack fa-2x">
                     <i className={`${styles.square} fa-solid fa-square fa-stack-2x`}></i>
                     <i className={`${styles.icon} fa-brands fa-linkedin-in fa-stack-1x fa-inverse`}></i>
                 </span>
-            </a>
-            <a href="">
+                </a>
+                <a href="">
                 <span className="fa-stack fa-2x">
                     <i className={`${styles.square} fa-solid fa-square fa-stack-2x`}></i>
                     <i className={`${styles.icon} fa-brands fa-twitter fa-stack-1x fa-inverse`}></i>
                 </span>
-            </a>
+                </a>
 
-            <a href="">
+                <a href="">
                 <span className="fa-stack fa-2x">
                     <i className={`${styles.square} fa-solid fa-square fa-stack-2x`}></i>
                     <i className={`${styles.icon} fa-brands fa-youtube fa-stack-1x fa-inverse`}></i>
                 </span>
-            </a>
+                </a>
 
-            <a href="">
+                <a href="">
                 <span className="fa-stack fa-2x">
                     <i className={`${styles.square} fa-solid fa-square fa-stack-2x`}></i>
                     <i className={`${styles.icon} fa-brands fa-instagram fa-stack-1x fa-inverse`}></i>
                 </span>
-            </a>
-
+                </a>
+            </div>
         </div>
     );
 }

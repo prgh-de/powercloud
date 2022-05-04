@@ -1,35 +1,75 @@
 /*.fa-brands, .fab {*/
-.footer{
+.footer {
     background-color: black;
 
     width: 100%;
     display: flex;
     justify-content: space-around;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 2px dashed #f69c55;
 
-    /*align-content: stretch;*/
-
-    /*width: 100%;*/
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: center;*/
-}
-.fa-stack{
-    background-color: black;
-}
-.pCopyright{
-color: white;
 }
 
-.pTag{
+
+
+.pCopyright {
+    color: white;
+}
+
+/*impressum datenschutz text only*/
+.animatedLinks {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.animatedLinks a {
+    position: relative;
     color: rgb(247, 204, 59);
-    font-weight: bold
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
 }
-.square{
+
+.animatedLinks a:hover {
+    color: rgb(247, 204, 59);
+}
+
+.animatedLinks a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(247, 204, 59);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.animatedLinks a:hover::before {
+    transform: scaleX(1);
+}
+
+
+/*facebook etc. Links */
+.socialMediaLinks {
+
+    width: 100%;
+    display: flex;
+    /*justify-content: space-around;*/
+}
+
+.square {
     color: rgb(247, 204, 59);
     /*background-color: rgb(247, 204, 59);*/
 
 }
-.icon{
+
+.icon {
     /*fa-2x;*/
     /*padding-right: 16px!important;*/
     font-family: "Font Awesome 6 Brands";
@@ -37,3 +77,33 @@ color: white;
 
     color: black;
 }
+
+.socialMediaLinks a {
+    position: relative;
+    color: rgb(247, 204, 59);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.socialMediaLinks a:hover {
+    color: rgb(247, 204, 59);
+}
+
+.socialMediaLinks a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(247, 204, 59);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.socialMediaLinks a:hover::before {
+    transform: scaleX(1);
+}
+
