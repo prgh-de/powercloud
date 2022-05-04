@@ -1,0 +1,30 @@
+/*.fa-brands, .fab {*/
+.footer{
+    background-color: black;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    /*align-content: stretch;*/
+
+    /*width: 100%;*/
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: center;*/
+}
+.fa-stack{
+    background-color: black;
+}
+
+.pTag{
+    color: white;
+}
+.icon{
+    /*fa-2x;*/
+    /*padding-right: 16px!important;*/
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 200;
+    background-color: rgb(247, 204, 59);
+    color: black;
+}
