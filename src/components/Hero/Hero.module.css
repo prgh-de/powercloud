@@ -38,6 +38,7 @@
     font-size: 34px;
     line-height: 1.29;
     white-space: pre-line;
+    margin: 0;
 }
 .bodyText {
     font-family: AvenirNext, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
