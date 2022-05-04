@@ -1,14 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-.Title{
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-    display: flex;
+.Title{
+    height: auto;
+    padding: 2em;
+    display: inline-block;
+    vertical-align: top;
 }
-.Text{
-    font-family:  Raleway,HelveticaNeue,Helvetica Neue,Helvetica-Neue,helvetica,arial,sans-serif;
-    font-size: 34px;
-    font-weight: 700;
-    line-height: 1.29;
-    justify-items: flex-start;
-    margin: 5% auto auto 10%;
+.Box{
     max-width: 700px;
+    max-height: 200px;
+    margin: 5% auto auto 10%;
+    position: relative;
+}
+.Box:after{
+    content:'';
+    width:86px;
+    height:8px;
+    background:#ffd334;
+    position: absolute;
+    top:-15px;
+    left: 0px;
+}
+.Text {
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-size: 34px;
+    line-height: 1.29;
 }
