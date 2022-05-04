@@ -1,0 +1,22 @@
+.container {
+    /* bootstrap simulation */
+
+}
+.heroContainer {
+    background-repeat: no-repeat;
+    background-image: url(https://power.cloud/wp-content/uploads/2022/03/Website_Homepager_Banner-on-Y_2048-900-1.png);
+    background-attachment: scroll;
+    background-position: center center;
+    max-height: 580px;
+    background-size: cover;
+}
+.innerContainer {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.headlineTitle {
+
+}
+.bodyText {
+
+}
