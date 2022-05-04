@@ -6,9 +6,11 @@ export default function Hero({title, bodyText}) {
         <div className={styles.heroContainer}>
             <div className={styles.container}>
                 <div className={styles.innerContainer}>
-                    <h2 className={styles.headlineTitle}>{title}</h2>
-                    <div className={styles.bodyText}>
-                        <p>{bodyText}</p>
+                    <div className={styles.textElements}>
+                        <h2 className={styles.headlineTitle}>{title}</h2>
+                        <div className={styles.bodyText}>
+                            <p>{bodyText}</p>
+                        </div>
                     </div>
                 </div>
             </div>

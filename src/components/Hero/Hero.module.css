@@ -20,8 +20,6 @@
     padding: 0;
 }
 .container {
-    display: table;
-    table-layout: fixed;
     height: 580px;
     width: 100%;
     max-width: 1310px;
@@ -29,11 +27,10 @@
     margin: 0 auto;
 }
 .innerContainer {
-    display: table-cell;
-    vertical-align: middle;
     height: 100%;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
 }
 .headlineTitle {
     font-family: Raleway,HelveticaNeue,Helvetica Neue,Helvetica-Neue,helvetica,arial,sans-serif;;
@@ -48,4 +45,19 @@
     line-height: 28px;
     white-space: pre-line;
     margin-top: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        height: 432px;
+    }
+    .innerContainer {
+        padding: 0 16px;
+    }
+    .headlineTitle {
+        font-size: 28px;
+    }
+    .bodyText {
+        font-size: 16px;
+    }
 }
