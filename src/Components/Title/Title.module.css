@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+.Title{
+
+    display: flex;
+}
+.Text{
+    font-family:  Raleway,HelveticaNeue,Helvetica Neue,Helvetica-Neue,helvetica,arial,sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.29;
+    justify-items: flex-start;
+    margin: 5% auto auto 10%;
+    max-width: 700px;
+}
