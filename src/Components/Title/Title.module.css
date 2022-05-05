@@ -12,7 +12,7 @@
     margin: 5% auto auto 10%;
     position: relative;
 }
-.Box:after{
+.Box:before{
     content:'';
     width:86px;
     height:8px;
