@@ -1,11 +1,11 @@
 import "./Components/Title/Title";
-import Title from "./Components/Title/Title";
+import Features from "./Components/Features/Features"
 
 function App() {
   return (
     <div className="App">
       <div className="Title">
-          <Title />
+          <Features />
       </div>
     </div>
   );

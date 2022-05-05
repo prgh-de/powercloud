@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+.features{
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-size: 10px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% auto auto 10%;
+    position: relative;
+}
+.box:before{
+    content:'';
+    width:86px;
+    height:8px;
+    background:#ffd334;
+    position: absolute;
+    top:-15px;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+    height: 600px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 45%;
+    height: 600px;
+}
+.li:before {
+    content: "\2713";
+}
