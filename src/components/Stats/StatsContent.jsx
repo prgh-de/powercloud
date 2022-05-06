@@ -1,5 +1,10 @@
-export default function StatsContent({title,text,firstActive}) {
+import styles from './StatsContent.module.css';
+
+export default function StatsContent({title,text}) {
     return (
-        <div>StatsContent</div>
+        <div className={styles.contentElement}>
+            <div className={styles.contentTitle}>{title}</div>
+            <div className={styles.contentText}>{text}</div>
+        </div>
     )
 }

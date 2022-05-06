@@ -1,6 +1,7 @@
 import styles from './Stats.module.css';
 import StatsNav from "./StatsNav";
 import StatsContent from "./StatsContent";
+import {useState} from "react";
 
 export default function Stats() {
     const stats = [
@@ -59,15 +60,29 @@ export default function Stats() {
             ]
         }
     ];
+    const startData = 0;
+    const [data,setData] = useState(stats[startData].data);
+
+
+    function onClickNavElement(e) {
+        let element = e.target;
+        let val = element.getAttribute('value');
+        setData(stats[val].data);
+    }
 
     return (
         <div className={styles.statsContainer}>
             <div className={styles.container}>
                 <div className={styles.innerContainer}>
-                    <StatsNav navElements={stats}/>
-                    {
-                        console.log(stats)
-                    }
+                    <StatsNav navElements={stats} func={onClickNavElement}/>
+                    <div className={styles.contentContainer}>
+                        {
+                            data.map((data,i)=>(
+                                <StatsContent key={i} title={data.title} text={data.text} />
+
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,12 @@
+.contentElement {
+    max-width: 33.33%;
+}
+.contentTitle {
+    font-size: 64px;
+}
+.contentText {
+    font-size: 18px;
+}
+.placeholder {
+    width: 6%;
+}
