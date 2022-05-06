@@ -2,15 +2,16 @@
 
 .Title{
     height: auto;
-    padding: 32px;
-    display: inline-block;
-    vertical-align: top;
+    width: 1246px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .Box{
     max-width: 700px;
     max-height: 200px;
-    margin: 5% auto auto 10%;
+    margin: 5% auto auto 100px;
     position: relative;
+
 }
 .Box:before{
     content:'';
