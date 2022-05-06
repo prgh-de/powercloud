@@ -9,8 +9,8 @@
 .Box{
     max-width: 700px;
     max-height: 200px;
-    margin: 5% auto auto 100px;
     position: relative;
+    margin-top: 100px;
 
 }
 .Box:before{
