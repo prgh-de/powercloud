@@ -21,3 +21,6 @@
     display: flex;
     padding-top: 32px;
 }
+.placeholderContainer {
+    width:  6%;
+}

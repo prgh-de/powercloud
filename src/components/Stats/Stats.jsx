@@ -79,7 +79,6 @@ export default function Stats() {
                         {
                             data.map((data,i)=>(
                                 <StatsContent key={i} title={data.title} text={data.text} />
-
                             ))
                         }
                     </div>
