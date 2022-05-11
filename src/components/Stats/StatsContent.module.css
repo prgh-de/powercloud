@@ -1,10 +1,27 @@
+font-face {
+    font-family: Raleway;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/raleway/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoorCIPrE.woff2");
+}
+@font-face {
+    font-family: AvenirNextBold;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/avenir-next/AvenirNextLTPro-Bold.otf");
+}
+
+@font-face {
+    font-family: AvenirNext;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/avenir-next/AvenirNextLTPro-Regular.otf");
+}
+
 .contentElement {
     max-width: 33.33%;
 }
 .contentTitle {
     font-size: 64px;
+    font-family: AvenirNextBold, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-weight: 700;
 }
 .contentText {
+    font-family: AvenirNext, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
     font-size: 18px;
 }
 .placeholder {

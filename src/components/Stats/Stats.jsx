@@ -62,19 +62,21 @@ export default function Stats() {
     ];
     const startData = 0;
     const [data,setData] = useState(stats[startData].data);
+    const [active,setActive] = useState(startData);
 
 
     function onClickNavElement(e) {
         let element = e.target;
         let val = element.getAttribute('value');
         setData(stats[val].data);
+        setActive(val);
     }
 
     return (
         <div className={styles.statsContainer}>
             <div className={styles.container}>
                 <div className={styles.innerContainer}>
-                    <StatsNav navElements={stats} func={onClickNavElement}/>
+                    <StatsNav navElements={stats} func={onClickNavElement} active={active}/>
                     <div className={styles.contentContainer}>
                         {
                             data.map((data,i)=>(

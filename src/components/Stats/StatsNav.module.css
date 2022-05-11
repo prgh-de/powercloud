@@ -1,4 +1,11 @@
-
+font-face {
+    font-family: Raleway;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/raleway/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoorCIPrE.woff2");
+}
+@font-face {
+    font-family: AvenirNext;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/avenir-next/AvenirNextLTPro-Regular.otf");
+}
 
 .navContainer {
     display: flex;
@@ -6,16 +13,21 @@
     height: 34px;
     border-bottom: 2px solid #000000;
 }
+.active {
+    font-weight: 700;
+    border-bottom: 6px solid #fdca10;
+}
 .navElement {
     font-size: 18px;
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
     text-transform: uppercase;
     padding: 0 46px 16px 0;
     margin-right: 154px;
+    position: relative;
+    top: 6px;
 }
-.navElement:hover {
-    cursor: pointer;
+.navText {
+
 }
-.active {
-    font-weight: 700;
-    border-bottom: 2px solid #fdca10;
-}
+
+
