@@ -1,10 +1,7 @@
 import style from "./Features.module.css"
 
-export default function Features () {
-    const header = "Darum lieben IT-Architekten powercloud:";
-    const content ="Modular, „cloud-native“ und bewiesene Skalierbarkeit, dazu REST-Services, Events und Automatisierung mit Machine Learning.";
-    const list = ["Moderne Softwarearchitektur", "Etablierte Standards", "Konsequenter cloud-basierter Ansatz", "Stetige Bereitstellung & Weiterentwicklung der Software"];
-    const linkText = "Erfahre mehr über die Plattform  >"
+export default function Features ({header, content, list, linkText}) {
+
 
     return(
         <div className={style.features}>
