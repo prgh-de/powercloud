@@ -1,0 +1,15 @@
+.CustomerContainer {
+    max-height: 844px;
+    min-height: 100px;
+    width: 100%;
+    margin: 0;
+    padding-top: 120px;
+    padding-bottom: 105px;
+}
+.container {
+    width: 100%;
+    max-width: 1310px;
+    max-height: 844px;
+    margin: 0 auto;
+    background-color: #ffcf22;
+}

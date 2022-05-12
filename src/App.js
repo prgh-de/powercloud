@@ -1,4 +1,4 @@
-import {Customers} from "./components/customers/Customers";
+import Customers from "./components/Customers/Customers";
 
 function App() {
   return (
