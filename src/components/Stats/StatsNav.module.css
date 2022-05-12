@@ -31,7 +31,7 @@ font-face {
     content: '';
     position: absolute;
     width: 0px;
-    height: 6px;
+    height: 8px;
     left: 50%;
     bottom:0;
     background-color: #fdca10;
@@ -43,7 +43,7 @@ font-face {
 }
 .active {
     font-weight: 700;
-    border-bottom: 6px solid #fdca10;
+    border-bottom: 8px solid #fdca10;
 }
 .active:after {
     transition: none;
