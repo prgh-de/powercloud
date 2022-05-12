@@ -1,0 +1,21 @@
+.testimonials{
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    width: 1246px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+.box:before{
+    content:'';
+    width:86px;
+    height:8px;
+    background:#ffd334;
+    position: absolute;
+    top: 15px;
+}
