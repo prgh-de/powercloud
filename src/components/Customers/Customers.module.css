@@ -1,15 +1,66 @@
-.CustomerContainer {
-    max-height: 844px;
-    min-height: 100px;
-    width: 100%;
-    margin: 0;
-    padding-top: 120px;
-    padding-bottom: 105px;
+font-face {
+    font-family: Raleway;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/raleway/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoorCIPrE.woff2");
+}
+@font-face {
+    font-family: AvenirNext;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/avenir-next/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+    font-family: AvenirNextBold;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/avenir-next/AvenirNextLTPro-Bold.otf");
+}
+body,html {
+    background-color: #ffcf22;
 }
 .container {
-    width: 100%;
     max-width: 1310px;
     max-height: 844px;
     margin: 0 auto;
     background-color: #ffcf22;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.headLine {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 64px;
+    padding-top: 20px;
+    width: 100%;
+}
+.title {
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    padding-left: 32px;
+}
+.references {
+    font-family: AvenirNextBold, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-right: 32px;
+    color: #000000;
+}
+.references a {
+    text-decoration: none;
+    color: #000000;
+}
+.references a:hover {
+    text-decoration: underline;
+}
+.whiteBar {
+    position: absolute;
+    background-color: #FFFFFF;
+    height: 8px;
+    width: 86px;
+    left: 32px;
+    top: 0px;
+}
+.customersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
