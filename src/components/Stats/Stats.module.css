@@ -20,7 +20,14 @@
 .contentContainer {
     display: flex;
     padding-top: 32px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .placeholderContainer {
     width:  6%;
+}
+@media only screen and (max-width: 768px) {
+    .innerContainer {
+        padding: 0 12px;
+    }
 }
