@@ -1,15 +1,14 @@
 import style from "./Title.module.css"
 
-export default function Title() {
-    const text = "Die führende SaaS Plattform der Energiewirtschaft für Mid- und Backoffice-Prozesse."
+export default function Title({text}) {
 
     return (
-        <div className={style.Title}>
-            <h1 className={style.Box}>
-                <h1 className={style.Text}>
+        <div className={style.title}>
+            <div className={style.box}>
+                <h1 className={style.text}>
                     {text}
                 </h1>
-            </h1>
+            </div>
         </div>);
 
 }
