@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200&display=swap');
+
+
+.testimonials{
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    background-image: url("https://power.cloud/wp-content/uploads/2020/09/hintergrundKundenstimmen.png");
+    background-size: cover;
+    height: 900px;
+}
+.container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container:before{
+    content:'';
+    width:86px;
+    height:8px;
+    background:#ffd334;
+    position: relative;
+    top: 140px;
+    left: 10%;
+}
+.header {
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-start;
+    margin-left:10%;
+    max-width: 100%;
+    margin-top: 150px;
+}
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1246px;
+    color: white;
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.38;
+    height: 300px;
+    padding: 3% 15%;
+    max-width: 100%;
+}
+.person{
+    font-family: 'Prompt', HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
