@@ -1,12 +1,21 @@
 .contact {
     width: 100%;
-    background-size: cover;
-    background-position: left top;
+    position: relative;
 }
 .overlay {
+    position: relative;
+    z-index: 2;
     width: 100%;
     height: 100%;
     background-image: linear-gradient(132deg,rgba(255,214,64,.6) -6%,rgba(253,202,16,.8) 49%);
+}
+.backgroundImage {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
 }
 .contactContainer {
     max-width: 1310px;
@@ -16,9 +25,6 @@
     flex-direction: row;
 }
 .contactContainer > div {
-    /*flex: 1 1 0;
-    display: flex;
-    flex-direction: column;*/
     position: relative;
 }
 .contactContainer > div:nth-of-type(1) {
@@ -43,6 +49,9 @@
     text-transform: uppercase;
     font-weight: bold;
     text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
 }
 .contactButton:after {
     content: '>';
@@ -53,8 +62,8 @@
     .contactContainer {
         flex-direction: column;
     }
-    .contactContainer > div {
-        width: 100% !important;
+    .contactContainer > div:nth-of-type(1), .contactContainer > div:nth-of-type(2) {
+        width: 100%;
     }
     .contactContainer > div:nth-of-type(2) {
          padding: 30px 0 0 0;

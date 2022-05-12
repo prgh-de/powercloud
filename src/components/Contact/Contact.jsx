@@ -3,7 +3,8 @@ import styles from './Contact.module.css';
 export default function Contact( {heading, text, buttonText, buttonLink, bgImgUrl} ) {
 
     return (
-        <section className={styles.contact} style={ {backgroundImage: `url(${bgImgUrl})`} }>
+        <section className={styles.contact}>
+            <img src={bgImgUrl} alt="" className={styles.backgroundImage}/>
             <div className={styles.overlay}>
                 <div className={styles.contactContainer}>
                     <div>
@@ -12,7 +13,7 @@ export default function Contact( {heading, text, buttonText, buttonLink, bgImgUr
                         <p>{text}</p>
                     </div>
                     <div>
-                        <a href={buttonLink} className={styles.contactButton}>{buttonText}</a>
+                        <button className={styles.contactButton}>{buttonText}</button>
                     </div>
                 </div>
             </div>
