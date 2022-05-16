@@ -1,10 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+
+import { Routes, Route, Link } from "react-router-dom";
+import Impressum from "./routes/Impressum";
+
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <Footer />
+
+      <Routes>{/*<Route path="/impressum" element={<Impressum />} />*/}</Routes>
     </div>
   );
 }
