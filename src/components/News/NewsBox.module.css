@@ -1,0 +1,92 @@
+font-face {
+    font-family: Raleway;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/raleway/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoorCIPrE.woff2");
+}
+@font-face {
+    font-family: AvenirNext;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/avenir-next/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+    font-family: AvenirNextBold;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/avenir-next/AvenirNextLTPro-Bold.otf");
+}
+@font-face {
+    font-family: pc-icons;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/pc-icons/pc-icons.woff2?b0ba324d1782aed6e3d5de48f179bde5");
+}
+.newsBoxSmall:hover, .newsBoxBig:hover {
+    transform: scale(1.01);
+}
+.newsBoxSmall {
+    position: relative;
+    padding: 48px 48px 48px 35px;
+    background-size: cover;
+    transition: all .25s ease-in-out;
+}
+.newsBoxBig {
+    position: relative;
+    padding: 117px 48px 48px 35px;
+    background-size: cover;
+    transition: all .25s ease-in-out;
+    grid-row-end: span 2;
+}
+.title {
+    margin-bottom: 10px;
+    font-family: AvenirNextBold, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #000000;
+}
+.subtitle {
+    margin-bottom: 20px;
+    font-family: AvenirNextBold, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    color: #000000;
+}
+.subtitle a {
+    text-decoration: none;
+    color: #000000;
+}
+.text {
+    font-family: AvenirNext, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;;
+    font-size: 18px;
+    line-height: 1.56;
+    hyphens: auto;
+    font-weight: 400;
+}
+.orangeButton a, .blackButton a{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 100%;
+    text-decoration: none;
+}
+.orangeButton a{
+    background-color: #fdca10;
+    color: #000000;
+}
+
+.blackButton a {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+.nextIcon {
+    font-family: pc-icons;
+}
+.nextIcon:before {
+    content: "\F107";
+}
+
+.overlay {
+    background-color: #000000;
+}
