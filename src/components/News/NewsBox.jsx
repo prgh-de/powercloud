@@ -36,18 +36,16 @@ export default function NewsBox({article}) {
 
     function showOverlay(e) {
         let element = dge(`newsBox${article.id}`);
-        if (e.type === 'mouseover') {
-            if (checkArticleOptionOverlay()) {
-                toggleDisplayElementsinOverlay(element.children,true)
-            }
-        } else if (e.type === 'mouseout') {
-            if (checkArticleOptionOverlay()) {
-                toggleDisplayElementsinOverlay(element.children,false)
+        if (checkArticleOptionOverlay()) {
+            if (e.type === 'mouseover') {
+                toggleDisplayElementsInOverlay(element.children,true);
+            } else if (e.type === 'mouseout') {
+                toggleDisplayElementsInOverlay(element.children,false);
             }
         }
     }
 
-    function toggleDisplayElementsinOverlay(elementCollection,state) {
+    function toggleDisplayElementsInOverlay(elementCollection,state) {
         for (let i=0;i<elementCollection.length;i++) {
             if (state === true) {
                 elementCollection[i].style.display = 'block';
