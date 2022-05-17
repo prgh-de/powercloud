@@ -59,11 +59,6 @@ ul li a:hover::after {
     left: 225px;
 }
 @media screen and (max-width: 900px ){
-    nav {
-        padding: 1rem 1rem;
-    }
-}
-@media screen and (max-width: 800px ){
     .toogle-button {
         display: block;
     }
@@ -84,5 +79,13 @@ ul li a:hover::after {
     }
     ul.active {
         left: 0px;
+    }
+}
+@media screen and (max-width: 600px ){
+    nav {
+        padding: 0 1.5rem;
+    }
+    .hr {
+        left: 170px;
     }
 }
