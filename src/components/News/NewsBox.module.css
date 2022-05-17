@@ -1,6 +1,6 @@
 font-face {
     font-family: Raleway;
-    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/raleway/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoorCIPrE.woff2");
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/raleway/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrE.woff2");
 }
 @font-face {
     font-family: AvenirNext;
@@ -31,6 +31,7 @@ font-face {
     grid-row-end: span 2;
 }
 .title {
+    position: relative;
     margin-bottom: 10px;
     font-family: AvenirNextBold, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
     font-weight: 700;
@@ -38,25 +39,36 @@ font-face {
     letter-spacing: 0.3px;
     text-transform: uppercase;
     color: #000000;
+    z-index: 1;
 }
 .subtitle {
+    position: relative;
     margin-bottom: 20px;
-    font-family: AvenirNextBold, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 0.3px;
     color: #000000;
+    z-index: 1;
+}
+.newsBoxBig > .subtitle {
+    margin-bottom: 90px;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.38;
 }
 .subtitle a {
     text-decoration: none;
     color: #000000;
 }
 .text {
+    position: relative;
     font-family: AvenirNext, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;;
     font-size: 18px;
     line-height: 1.56;
     hyphens: auto;
     font-weight: 400;
+    z-index: 1;
 }
 .orangeButton a, .blackButton a{
     position: absolute;
@@ -70,6 +82,7 @@ font-face {
     background-color: #000;
     border-radius: 100%;
     text-decoration: none;
+    z-index: 1;
 }
 .orangeButton a{
     background-color: #fdca10;
@@ -86,7 +99,13 @@ font-face {
 .nextIcon:before {
     content: "\F107";
 }
-
 .overlay {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     background-color: rgba(0,0,0,0.3);
+    left: 0;
+    top: 0;
+    z-index: 0;
 }
