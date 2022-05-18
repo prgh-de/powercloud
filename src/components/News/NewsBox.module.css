@@ -40,6 +40,7 @@ font-face {
     text-transform: uppercase;
     color: #000000;
     z-index: 1;
+    pointer-events: none;
 }
 .subtitle {
     position: relative;
@@ -69,6 +70,7 @@ font-face {
     hyphens: auto;
     font-weight: 400;
     z-index: 1;
+    pointer-events: none;
 }
 .orangeButton a, .blackButton a{
     position: absolute;
@@ -100,7 +102,6 @@ font-face {
     content: "\F107";
 }
 .overlay {
-    display: none;
     width: 100%;
     height: 100%;
     position: absolute;

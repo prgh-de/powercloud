@@ -1,7 +1,7 @@
 import styles from './NewsBox.module.css';
 
 export default function NewsBox({article}) {
-    let boxstyle = article.boxstyle === 'small' ? styles.newsBoxSmall : styles.newsBoxBig;
+    let boxStyle = article.boxstyle === 'small' ? styles.newsBoxSmall : styles.newsBoxBig;
     let button = article.buttonstyle === 'orange' ? styles.orangeButton : styles.blackButton;
 
     let imageStyle = {
@@ -10,29 +10,28 @@ export default function NewsBox({article}) {
     }
 
     let overlayStyle = {
-        "display":article.showOverlayAsDefault === true ? "block":"none",
+        "opacity":article.showOverlayAsDefault === true ? "1":"0",
     }
 
     let titleStyle = {
         "color":article.textAsOverlay === true ? "#fdca10"  : "#000000",
-        "display":article.textAsOverlay === true && article.showOverlayAsDefault === false ? "none":"block"
+        "opacity":article.textAsOverlay === true && article.showOverlayAsDefault === false ? "0":"1"
     }
     let subtitleStyle = {
         "color":article.textAsOverlay === true ? "#FFFFFF"  : "#000000",
-        "display":article.textAsOverlay === true && article.showOverlayAsDefault === false ? "none":"block"
+        "opacity":article.textAsOverlay === true && article.showOverlayAsDefault === false ? "0":"1"
     }
     let subtitleAStyle = {
         "color":article.textAsOverlay === true ? "#FFFFFF"  : "#000000"
     }
     let textStyle = {
         "color":article.textAsOverlay === true ? "#FFFFFF"  : "#000000",
-        "display":article.textAsOverlay === true && article.showOverlayAsDefault === false ? "none":"block"
+        "opacity":article.textAsOverlay === true && article.showOverlayAsDefault === false ? "0":"1"
     }
 
     let buttonStyle = {
-        "display":article.textAsOverlay === true && article.showOverlayAsDefault === false ? "none":"block"
+        "opacity":article.textAsOverlay === true && article.showOverlayAsDefault === false ? "0":"1"
     }
-
 
     function showOverlay(e) {
         let element = dge(`newsBox${article.id}`);
@@ -48,9 +47,9 @@ export default function NewsBox({article}) {
     function toggleDisplayElementsInOverlay(elementCollection,state) {
         for (let i=0;i<elementCollection.length;i++) {
             if (state === true) {
-                elementCollection[i].style.display = 'block';
+                fade(elementCollection[i],400,0)
             } else {
-                elementCollection[i].style.display = 'none';
+                fade(elementCollection[i],400,1)
             }
         }
     }
@@ -66,8 +65,24 @@ export default function NewsBox({article}) {
         return document.getElementById(element);
     }
 
+    function fade(element, time, inOut = 0) {
+        element.style.opacity = inOut;
+        let last = +new Date();
+        let direction = inOut === 1 ? -1 : 1;
+        let tick = function() {
+            element.style.opacity = +element.style.opacity + direction * ((new Date() - last) / time);
+            last = +new Date();
+            if (+element.style.opacity < 1 && inOut === 0) {
+                (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+            } else if (+element.style.opacity > 0 && inOut === 1) {
+                (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+            }
+        };
+        tick();
+    }
+
     return (
-        <div className={boxstyle} id={`newsBox${article.id}`} style={imageStyle} onMouseOver={showOverlay} >
+        <div className={boxStyle} id={`newsBox${article.id}`} style={imageStyle} onMouseOver={showOverlay} >
             <div className={styles.title} style={titleStyle}>{article.title}</div>
             <div className={styles.subtitle} style={subtitleStyle}><a href={article.subtitlelink} style={subtitleAStyle}>{article.subtitle}</a></div>
             <div className={styles.text} style={textStyle}>{article.text}</div>
