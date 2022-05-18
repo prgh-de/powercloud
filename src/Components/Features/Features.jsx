@@ -11,7 +11,7 @@ export default function Features ({header, content, list, linkText}) {
                     <h2 className={style.header}>{header}</h2>
                     <div className={style.content}>{content}</div>
                     <div className={style.list}> {list.map((item) => <li className={style.li}>{item}</li>)}</div>
-                    <div className={style.link}><a href="https://power.cloud/plattform" title="Erfahre mehr über die Plattform">{linkText}</a></div>
+                    <button className={style.link}><a className={style.link} href="https://power.cloud/plattform" title="Erfahre mehr über die Plattform">{linkText}</a></button>
                 </div>
                 <div className={style.right}><img className={style.img} src="https://power.cloud/wp-content/uploads/2020/09/ITEntwickler.png"  alt="IT-Entwickler" height="auto%" width="90%" /></div>
             </div>
