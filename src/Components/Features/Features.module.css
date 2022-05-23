@@ -79,6 +79,8 @@
 .link:hover{
     color: #ffd334;
     cursor: pointer;
+    transition-property: color;
+    transition-duration: 500ms;
 }
 a{
     text-decoration: none;
