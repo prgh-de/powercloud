@@ -80,7 +80,8 @@
     color: #ffd334;
     cursor: pointer;
     transition-property: color;
-    transition-duration: 500ms;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
 }
 a{
     text-decoration: none;
