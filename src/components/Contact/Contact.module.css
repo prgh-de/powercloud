@@ -52,6 +52,10 @@
     font-size: 1rem;
     cursor: pointer;
     border: none;
+    transition: all .25s ease-in-out;
+}
+.contactButton:hover {
+    color: #fdca10;
 }
 .contactButton:after {
     content: '>';
