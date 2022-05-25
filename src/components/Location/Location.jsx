@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 export default function Location( {image, city, companyName, address }) {
 
     return (<>
+        <p>test...Location</p>
         <img className={styles.image} src={image} alt={city}/>
 
         <h3>{city}</h3>

@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 // import data from "/db.json";
 import Location from "../Location/Location";
 
-export default function LocationList(){
+export default function LocationList() {
 
     const [locations, setLocation] = useState([]);
 
@@ -17,6 +17,7 @@ export default function LocationList(){
         })
             .then(response => response.json())
             .then(data => {
+                setLocation(data);
                 console.log('Success:', data);
             })
             .catch((error) => {
@@ -28,11 +29,13 @@ export default function LocationList(){
     //     const apiLocations = await getAllLocations()
     //     setContacts(apiLocations);
     // }
+    console.log("location: " + locations.location);
+    console.log("Objects:" + Object.keys(locations));
 
     return (
         <>
-            {locations.map((location) => (
-                <Location location={location} />
+            {locations.map((location, i) => (
+                <Location location={location}/>
             ))}
         </>
     );
