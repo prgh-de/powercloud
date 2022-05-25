@@ -1,4 +1,6 @@
 import Contact from "./components/Contact/Contact";
+import CardContainer from './components/CardContainer/CardContainer';
+import Title from "./Components/Title/Title";
 
 function App() {
   return (
@@ -10,6 +12,10 @@ function App() {
             buttonLink={"#contactform"}
             buttonText={"Zum Kontaktformular"}
             bgImgUrl={"https://power.cloud/wp-content/uploads/2020/08/pc-home-kontakt.jpg"}/>
+        <CardContainer/>
+        <div className="Title">
+          <Title text = "Die führende SaaS Plattform der Energiewirtschaft für Mid- und Backoffice-Prozesse." />
+        </div>
     </div>
   );
 }
