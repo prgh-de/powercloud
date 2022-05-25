@@ -5,7 +5,7 @@ import Location from "../Location/Location";
 
 export default function LocationList() {
 
-    const [locations, setLocation] = useState([]);
+    const [locations, setLocation] = useState({});
 
     useEffect(() => {
 
@@ -34,7 +34,8 @@ export default function LocationList() {
 
     return (
         <>
-            {locations.map((location, i) => (
+
+            {locations.location.map((location, i) => (
                 <Location location={location}/>
             ))}
         </>

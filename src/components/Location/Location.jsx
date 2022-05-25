@@ -1,10 +1,10 @@
 import styles from './Location.module.css';
 import PropTypes from 'prop-types';
 
-export default function Location( {image, city, companyName, address }) {
+export default function Location( {continent, image, city, companyName, address }) {
 
     return (<>
-        <p>test...Location</p>
+        <p>continent: {continent}test...Location</p>
         <img className={styles.image} src={image} alt={city}/>
 
         <h3>{city}</h3>

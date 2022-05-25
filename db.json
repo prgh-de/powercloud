@@ -1,30 +1,32 @@
-[
-  {
-    "continent":"Europa",
-    "locations":[
-      {
-        "picture":"https://power.cloud/wp-content/uploads/2021/12/powercloud-achern-sw-scaled-1.jpg",
-        "city":"Offenburg",
-        "addressTitle":"powercloud GmbH",
-        "address":"Max-Planck-Str. 1\n77656 Offenburg"
-      },
-      {
-        "picture":"xxx.jpg",
-        "city":"Leipzig",
-        "addressTitle":"powercloud GmbH",
-        "address":"Bosestraße 4\n04109 Leipzig"
-      }
-    ]
-  },
-  {
-    "continent":"Nord-Amerika",
-    "locations":[
-      {
-        "picture":"yyy.jpg",
-        "city":"San Francisco",
-        "addressTitle":"powercloud Americas Inc.",
-        "address":"981 Mission Street #9\nSan Francisco, CA 94103"
-      }
-    ]
-  }
-]
+{
+  "location": [
+    {
+      "continent": "Europa",
+      "locations": [
+        {
+          "picture": "https://power.cloud/wp-content/uploads/2021/12/powercloud-achern-sw-scaled-1.jpg",
+          "city": "Offenburg",
+          "addressTitle": "powercloud GmbH",
+          "address": "Max-Planck-Str. 1\n77656 Offenburg"
+        },
+        {
+          "picture": "xxx.jpg",
+          "city": "Leipzig",
+          "addressTitle": "powercloud GmbH",
+          "address": "Bosestraße 4\n04109 Leipzig"
+        }
+      ]
+    },
+    {
+      "continent": "Nord-Amerika",
+      "locations": [
+        {
+          "picture": "yyy.jpg",
+          "city": "San Francisco",
+          "addressTitle": "powercloud Americas Inc.",
+          "address": "981 Mission Street #9\nSan Francisco, CA 94103"
+        }
+      ]
+    }
+  ]
+}
