@@ -1,0 +1,78 @@
+.contact {
+    width: 100%;
+    position: relative;
+}
+.overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(132deg,rgba(255,214,64,.6) -6%,rgba(253,202,16,.8) 49%);
+}
+.backgroundImage {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+}
+.contactContainer {
+    max-width: 1310px;
+    margin: auto;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: row;
+}
+.contactContainer > div {
+    position: relative;
+}
+.contactContainer > div:nth-of-type(1) {
+    width: 57%;
+}
+.contactContainer > div:nth-of-type(2) {
+    width: 43%;
+    padding: 0 0 0 10px;
+}
+.bar {
+    width: 86px;
+    height: 8px;
+    background-color: black;
+}
+.contactButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    padding: 14px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: all .25s ease-in-out;
+}
+.contactButton:hover {
+    color: #fdca10;
+}
+.contactButton:after {
+    content: '>';
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+    .contactContainer {
+        flex-direction: column;
+    }
+    .contactContainer > div:nth-of-type(1), .contactContainer > div:nth-of-type(2) {
+        width: 100%;
+    }
+    .contactContainer > div:nth-of-type(2) {
+         padding: 30px 0 0 0;
+     }
+    .contactButton {
+        position: relative;
+    }
+}
