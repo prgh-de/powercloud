@@ -1,3 +1,4 @@
+import Stats from "./components/Stats/Stats";
 import Contact from "./components/Contact/Contact";
 import CardContainer from './components/CardContainer/CardContainer';
 import Title from "./Components/Title/Title";
@@ -5,6 +6,7 @@ import Title from "./Components/Title/Title";
 function App() {
   return (
     <div className="App">
+      <Stats />
       <h1>Hello World!</h1>
         <Contact
             heading={"Jetzt Kontakt aufnehmen!"}
