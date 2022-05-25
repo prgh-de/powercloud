@@ -84,7 +84,7 @@ export default function NewsBox({article}) {
     return (
         <div className={boxStyle} id={`newsBox${article.id}`} style={imageStyle} onMouseOver={showOverlay} >
             <div className={styles.title} style={titleStyle}>{article.title}</div>
-            <div className={styles.subtitle} style={subtitleStyle}><a href={article.subtitlelink} style={subtitleAStyle}>{article.subtitle}</a></div>
+            <div className={styles.subtitle} style={subtitleStyle}><a href={article.subtitlelink} style={subtitleAStyle} onMouseOver={showOverlay}>{article.subtitle}</a></div>
             <div className={styles.text} style={textStyle}>{article.text}</div>
             <div className={button} style={buttonStyle}><a href={article.subtitlelink}><span className={styles.nextIcon}></span></a></div>
             <div className={styles.overlay} style={overlayStyle} onMouseOut={showOverlay}></div>
