@@ -5,11 +5,11 @@ import Location from "../Location/Location";
 
 export default function LocationList() {
 
-    const [locations, setLocation] = useState({});
+    const [locations, setLocation] = useState([]);
 
     useEffect(() => {
 
-        fetch('http://localhost:4000/locations', {
+        fetch('http://localhost:4000/location', {
             method: 'GET', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -25,18 +25,11 @@ export default function LocationList() {
             });
     }, []);
 
-    // async function loadLocation() {
-    //     const apiLocations = await getAllLocations()
-    //     setContacts(apiLocations);
-    // }
-    console.log("location: " + locations.location);
-    console.log("Objects:" + Object.keys(locations));
-
     return (
         <>
 
-            {locations.location.map((location, i) => (
-                <Location location={location}/>
+            {locations.map((location, i) => (
+                <Location key={i} location={location}/>
             ))}
         </>
     );
