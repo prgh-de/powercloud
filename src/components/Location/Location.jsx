@@ -1,4 +1,5 @@
 import styles from './Location.module.css';
+import PropTypes from 'prop-types';
 
 export default function Location( {image, city, companyName, address }) {
 
@@ -14,8 +15,9 @@ export default function Location( {image, city, companyName, address }) {
     </>);
 }
 
-ProductList.propTypes = {
+Location.propTypes = {
     image: PropTypes.string,
-    headline: PropTypes.string,
-    text: PropTypes.string,
+    city: PropTypes.string,
+    companyName: PropTypes.string,
+    address: PropTypes.string,
 }
