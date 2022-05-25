@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+.title{
+    height: auto;
+    width: 1246px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box{
+    max-width: 700px;
+    max-height: 200px;
+    position: absolute;
+    margin-top: 80px;
+
+}
+.box:before{
+    content:'';
+    width:86px;
+    height:8px;
+    background:#ffd334;
+    position: absolute;
+    top: 10px;
+}
+.text {
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-size: 34px;
+    line-height: 1.29;
+}

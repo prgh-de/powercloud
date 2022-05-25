@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import Title from "./Components/Title/Title";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World!</h1>
+      <div className="Title">
+          <Title text = "Die führende SaaS Plattform der Energiewirtschaft für Mid- und Backoffice-Prozesse." />
+      </div>
     </div>
   );
 }
