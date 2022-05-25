@@ -27,9 +27,12 @@ export default function LocationList() {
 
     return (
         <>
-
+            {/*<Location  name="location...." lastname="location...."/>*/}
             {locations.map((location, i) => (
-                <Location key={i} location={location}/>
+                <>
+                    <h1 key={i}>{location.continent} test h21</h1>
+                    <Location key={i} jsonfile={location}/>
+                </>
             ))}
         </>
     );
