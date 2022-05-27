@@ -4,7 +4,7 @@ import styles from './Location.module.css';
 export default function Location({jsonfile}) {
     return (<>
         {jsonfile.locations.map((location, i) => (
-            <div className={styles.locationContainer} >
+            <div key={"location" + i} className={styles.locationContainer} >
                 <img className={styles.image} src={location.picture} alt={location.picture}/>
                 <div className={styles.locationDescription}>
                     <h3 className={styles.titleCity}>{location.city}</h3>

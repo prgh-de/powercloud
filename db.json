@@ -10,10 +10,10 @@
           "address": "Max-Planck-Str. 1\n77656 Offenburg"
         },
         {
-          "picture": "https://power.cloud/wp-content/uploads/2021/12/powercloud-leipzig-sw-scaled-1.jpg",
-          "city": "Leipzig",
-          "addressTitle": "powercloud GmbH",
-          "address": "Bosestraße 4\n04109 Leipzig"
+          "picture":"https://power.cloud/wp-content/uploads/2021/12/powercloud-leipzig-sw-scaled-1.jpg",
+          "city":"Leipzig",
+          "addressTitle":"powercloud GmbH",
+          "address":"Bosestraße 4\n04109 Leipzig"
         }
       ]
     },

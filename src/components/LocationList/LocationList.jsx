@@ -28,12 +28,11 @@ export default function LocationList() {
     return (
             <div className={styles.container}>
                 {locations.map((location, i) => (
-                    <>
-                        <Title key={i} text={location.continent} />
-                        <Location key={i} jsonfile={location}/>
-                    </>
+                    <div key={i}>
+                        <Title key={"title"+ i} text={location.continent}/>
+                        <Location key={"Location" + i} jsonfile={location} />
+                    </div>
                 ))}
             </div>
     );
-
 }
