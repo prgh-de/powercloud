@@ -1,7 +1,6 @@
 import styles from './Location.module.css';
 //import PropTypes from 'prop-types';
 
-//export default function Location( {continent, image, city, companyName, address }) {
 export default function Location({jsonfile}) {
     return (<>
         {jsonfile.locations.map((location, i) => (
