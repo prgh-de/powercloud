@@ -1,6 +1,5 @@
 import {useEffect, useState} from 'react';
-
-// import data from "/db.json";
+import styles from './LocationList.module.css';
 import Location from "../Location/Location";
 
 export default function LocationList() {
@@ -26,15 +25,14 @@ export default function LocationList() {
     }, []);
 
     return (
-        <>
-            {/*<Location  name="location...." lastname="location...."/>*/}
-            {locations.map((location, i) => (
-                <>
-                    <h1 key={i}>{location.continent} test h21</h1>
-                    <Location key={i} jsonfile={location}/>
-                </>
-            ))}
-        </>
+            <div className={styles.container}>
+                {locations.map((location, i) => (
+                    <>
+                        <h1 key={i}>{location.continent} test h21</h1>
+                        <Location key={i} jsonfile={location}/>
+                    </>
+                ))}
+            </div>
     );
 
 }

@@ -1,15 +1,18 @@
 import styles from './Location.module.css';
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 
 //export default function Location( {continent, image, city, companyName, address }) {
 export default function Location({jsonfile}) {
     return (<>
         {jsonfile.locations.map((location, i) => (
-            <div key={i}>
-                <img className={styles.image} src={location.image} alt={location.picture}/>
-                <h3>{location.addressTitle}</h3>
-                <p className={styles.companyName}>{location.addressTitle}</p>
-                <p className={styles.address}>{location.address}</p>
+            <div className={styles.locationContainer} key={i}>
+                <img className={styles.image} src={location.picture} alt={location.picture}/>
+                <div className={styles.locationDescription}>
+                    <h3>{location.city}</h3>
+                    <p><b>{location.addressTitle}</b></p>
+                    <p className={styles.companyName}>{location.addressTitle}</p>
+                    <p className={styles.address}>{location.address}</p>
+                </div>
             </div>
             ))}
     </>);

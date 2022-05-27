@@ -1,5 +1,13 @@
+.locationContainer {
+    display: flex;
+    padding-bottom: 60px;
+}
 .image {
-
+    width: 570px;
+    height: 320px;
+}
+.locationDescription {
+    margin-left: 75px;
 }
 .companyName {
 
