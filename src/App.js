@@ -1,9 +1,13 @@
-import LocationList from "./components/LocationList/LocationList";
+import { Routes, Route } from "react-router-dom";
+import RouteLocation from "./pages/RouteLocation";
+
 
 function App() {
   return (
     <div className="App">
-        <LocationList></LocationList>
+      <Routes>
+        <Route path="/location" element={<RouteLocation />} />
+      </Routes>
     </div>
   );
 }
