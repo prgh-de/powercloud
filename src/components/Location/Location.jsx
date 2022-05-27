@@ -8,7 +8,7 @@ export default function Location({jsonfile}) {
             <div className={styles.locationContainer} key={i}>
                 <img className={styles.image} src={location.picture} alt={location.picture}/>
                 <div className={styles.locationDescription}>
-                    <h3>{location.city}</h3>
+                    <h3 className={styles.titleCity}>{location.city}</h3>
                     <p><b>{location.addressTitle}</b></p>
                     <p className={styles.companyName}>{location.addressTitle}</p>
                     <p className={styles.address}>{location.address}</p>

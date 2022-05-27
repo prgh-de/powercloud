@@ -10,7 +10,7 @@
           "address": "Max-Planck-Str. 1\n77656 Offenburg"
         },
         {
-          "picture": "xxx.jpg",
+          "picture": "https://power.cloud/wp-content/uploads/2021/12/powercloud-leipzig-sw-scaled-1.jpg",
           "city": "Leipzig",
           "addressTitle": "powercloud GmbH",
           "address": "Bosestraße 4\n04109 Leipzig"
@@ -21,7 +21,7 @@
       "continent": "Nord-Amerika",
       "locations": [
         {
-          "picture": "yyy.jpg",
+          "picture": "https://power.cloud/wp-content/uploads/2021/12/powercloud-san-francisco-sw_scaled.jpg",
           "city": "San Francisco",
           "addressTitle": "powercloud Americas Inc.",
           "address": "981 Mission Street #9\nSan Francisco, CA 94103"

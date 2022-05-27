@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import styles from './LocationList.module.css';
 import Location from "../Location/Location";
+// import Title from "../Title/Title";
 
 export default function LocationList() {
 
@@ -28,7 +29,7 @@ export default function LocationList() {
             <div className={styles.container}>
                 {locations.map((location, i) => (
                     <>
-                        <h1 key={i}>{location.continent} test h21</h1>
+                        <div key={i} text={location.continent} />
                         <Location key={i} jsonfile={location}/>
                     </>
                 ))}
