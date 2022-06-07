@@ -81,6 +81,7 @@ textarea{
     font-weight: bold;
 }
 
-.message {
+.errormessage {
     color: red;
+    font-weight: normal;
 }

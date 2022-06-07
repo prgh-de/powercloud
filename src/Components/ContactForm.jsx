@@ -2,7 +2,6 @@ import {useState} from 'react';
 import styles from "./ContactForm.module.css";
 import { useNavigate } from "react-router-dom";
 
-
 export default function ContactForm({sendDataOnSubmit}) {
     const [valid, setValid] = useState({
         firstName: false,
@@ -20,29 +19,29 @@ export default function ContactForm({sendDataOnSubmit}) {
         message: "",
         phone: "",
         callback: "",
-        newsletter: "",
-        privacy:""
+        newsletter: false,
+        privacy: false
     });
 
-    const invalidMessage = <p className={styles.message}>Bitte füllen Sie dieses Pflichtfeld aus.</p>
+    const invalidMessage = <p className={styles.errormessage}>Bitte füllen Sie dieses Pflichtfeld aus.</p>
     const navigate = useNavigate();
-
 
     function onInputChange(event) {
         const {name, value, type } = event.target;
+        setFormData({...formData, [name]: value});
         console.log(type);
         if (event.target.type === "checkbox") {
             const { checked } = event.target;
             console.log(checked);
+
             if(checked) {
                 setValid({...valid, [name]: false});
+                setFormData({...formData, [name]: checked});
             }
             else {
                 setValid({...valid, [name]: true});
             }
         }
-
-            setFormData({...formData, [name]: value});
 
 
     }
@@ -57,7 +56,6 @@ export default function ContactForm({sendDataOnSubmit}) {
         }
 
     }
-
             function onSubmit(event) {
                 event.preventDefault();
 
@@ -74,7 +72,6 @@ export default function ContactForm({sendDataOnSubmit}) {
                 });
                 navigate("/datasent");
             }
-
             return (
                 <div className={styles.ContactForm}>
                     <div className={styles.container}>
