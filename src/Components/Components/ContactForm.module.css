@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+.ContactForm{
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-size: 18px;
+    margin: 50px;
+
+}
+.userdata input, textarea{
+    background: none;
+    font-size: 18px;
+    padding: 30px 0 10px 10px;
+    border: none;
+    border-bottom: 2px solid #cad5e2;
+    width: 100%;
+    outline: none;
+}
+textarea{
+    padding-top: 10px;
+    height: 80px;
+    resize: none;
+}
+.fname, .lname, .phone, .cbtime {
+    width: 50%;
+}
+.userdata label {
+    padding-top: 20px;
+}
+.message, .dropdown{
+    background-color: #f5f8fa;
+}
+.dropdown {
+    width: 100%;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+.container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1310px;
+    padding: 40px;
+    box-shadow: 0 11px 27px 0 rgba(25,25,68,.15);
+}
+.fname, .phone {
+    padding-right: 10%;
+}
+.name, .callback{
+    display: flex;
+    justify-content: space-between;
+}
+.userdata label {
+    display: block;
+}
+.button {
+    background-color: #ffd334;
+    color: black;
+    padding: 14px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    width: auto;
+    border-radius: 3px;
+}
+.senddata {
+    display: flex;
+    justify-content: center;
+}
+.legalconsent, .newsletter, .privacy, .privacyagree {
+    font-size: 12px;
+    padding-top: 10px;
+}
+.legalconsent {
+    padding-top: 20px;
+}
+.privacy {
+    font-weight: bold;
+}
