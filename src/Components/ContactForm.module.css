@@ -80,3 +80,7 @@ textarea{
 .privacy {
     font-weight: bold;
 }
+
+.message {
+    color: red;
+}

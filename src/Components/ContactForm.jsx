@@ -4,7 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function ContactForm({sendDataOnSubmit}) {
-
+    const [valid, setValid] = useState({
+        firstName: false,
+        lastName: false,
+        company: false,
+        email: false,
+        message: false,
+        privacy:false
+    });
     const[formData, setFormData] = useState({
         firstName: "",
         lastName: "",
@@ -17,66 +24,40 @@ export default function ContactForm({sendDataOnSubmit}) {
         privacy:""
     });
 
+    const invalidMessage = <p className={styles.message}>Bitte füllen Sie dieses Pflichtfeld aus.</p>
     const navigate = useNavigate();
 
 
     function onInputChange(event) {
-        const {name, value } = event.target;
-        setFormData({...formData, [name]: value});
+        const {name, value, type } = event.target;
+        console.log(type);
+        if (event.target.type === "checkbox") {
+            const { checked } = event.target;
+            console.log(checked);
+            if(checked) {
+                setValid({...valid, [name]: false});
+            }
+            else {
+                setValid({...valid, [name]: true});
+            }
+        }
+
+            setFormData({...formData, [name]: value});
+
+
     }
-    function onFirstNameBlur(event) {
+    function onBlurHandler(event) {
+        event.preventDefault();
+        const {name} = event.target;
         if (event.target.value === "") {
-            document.getElementsByClassName("message")[0].innerHTML = "Bitte füllen Sie dieses Pflichtfeld aus.";
-            document.getElementsByClassName("message")[0].style.color = "red";
-        } else {
-            document.getElementsByClassName("message")[0].innerHTML = "";
+            setValid({...valid, [name]: true})
         }
+        else {
+            setValid({...valid, [name]: false})
+        }
+
     }
 
-    function onLastNameBlur(event) {
-        if (event.target.value === "") {
-            document.getElementsByClassName("message")[1].innerHTML = "Bitte füllen Sie dieses Pflichtfeld aus.";
-            document.getElementsByClassName("message")[1].style.color = "red";
-        } else {
-            document.getElementsByClassName("message")[1].innerHTML = "";
-        }
-    }
-
-        function onCompanyBlur(event) {
-            if (event.target.value === "") {
-                document.getElementsByClassName("message")[2].innerHTML = "Bitte füllen Sie dieses Pflichtfeld aus.";
-                document.getElementsByClassName("message")[2].style.color = "red";
-            } else {
-                document.getElementsByClassName("message")[2].innerHTML = "";
-            }
-        }
-            function onEmailBlur(event) {
-                if (event.target.value === "") {
-                    document.getElementsByClassName("message")[3].innerHTML = "Bitte füllen Sie dieses Pflichtfeld aus.";
-                    document.getElementsByClassName("message")[3].style.color = "red";
-                } else {
-                    document.getElementsByClassName("message")[3].innerHTML = "";
-                }
-            }
-
-            function onMessageBlur(event) {
-                if (event.target.value === "") {
-                    document.getElementsByClassName("message")[4].innerHTML = "Bitte füllen Sie dieses Pflichtfeld aus.";
-                    document.getElementsByClassName("message")[4].style.color = "red";
-                } else {
-                    document.getElementsByClassName("message")[4].innerHTML = "";
-                }
-            }
-
-            /*  function onPrivacyChange(event) {
-                  setPrivacy(event.target.checked);
-                  if (!event.target.checked) {
-                      document.getElementsByClassName("message")[5].innerHTML = "Bitte füllen Sie dieses Pflichtfeld aus.";
-                      document.getElementsByClassName("message")[5].style.color = "red";
-                  } else {
-                      document.getElementsByClassName("message")[5].innerHTML = "";
-                  }
-              } */
             function onSubmit(event) {
                 event.preventDefault();
 
@@ -107,10 +88,10 @@ export default function ContactForm({sendDataOnSubmit}) {
                                             type="text"
                                             value={formData.firstName}
                                             onChange={onInputChange}
-                                            onBlur={onFirstNameBlur}
+                                            onBlur={onBlurHandler}
                                             required
                                         />
-                                        <p className="message"></p>
+                                        {valid.firstName && invalidMessage}
                                     </div>
                                     <div className={styles.lname}>
                                         <label htmlFor="lastName">Nachname<span style={{color: "red"}}>*</span></label>
@@ -119,43 +100,49 @@ export default function ContactForm({sendDataOnSubmit}) {
                                             type="text"
                                             value={formData.lastName}
                                             onChange={onInputChange}
-                                            onBlur={onLastNameBlur}
+                                            onBlur={onBlurHandler}
                                             className={styles.lname}
                                             required
                                         />
-                                        <p className="message"></p>
+                                        {valid.lastName && invalidMessage}
                                     </div>
                                 </div>
+                                <div>
                                 <label htmlFor="company">Unternehmen<span style={{color: "red"}}>*</span></label>
                                 <input
                                     name="company"
                                     type="text"
                                     value={formData.company}
                                     onChange={onInputChange}
-                                    onBlur={onCompanyBlur}
+                                    onBlur={onBlurHandler}
                                     required
                                 />
-                                <p className="message"></p>
+                                </div>
+                                {valid.company && invalidMessage}
+                                <div>
                                 <label htmlFor="email">E-Mail<span style={{color: "red"}}>*</span></label>
                                 <input
                                     name="email"
                                     type="email"
                                     value={formData.email}
                                     onChange={onInputChange}
-                                    onBlur={onEmailBlur}
+                                    onBlur={onBlurHandler}
                                     required
                                 />
-                                <p className="message"></p>
+                                    </div>
+                                {valid.email && invalidMessage}
+                                <div>
                                 <label htmlFor="message">Nachricht<span style={{color: "red"}}>*</span></label>
                                 <textarea
                                     name="message"
                                     value={formData.message}
                                     onChange={onInputChange}
-                                    onBlur={onMessageBlur}
+                                    onBlur={onBlurHandler}
                                     className={styles.message}
                                     required
                                 />
-                                <p className="message"></p>
+                                </div>
+                                {valid.message && invalidMessage}
                                 <div className={styles.callback}>
                                     <div className={styles.phone}>
                                         <label htmlFor="phone">Telefonnummer</label>
@@ -204,7 +191,7 @@ export default function ContactForm({sendDataOnSubmit}) {
                                     Daten
                                     durch powercloud
                                     zu.<span style={{color: "red"}}>*</span></label>
-                                <p className="message"></p>
+                                {valid.privacy && invalidMessage}
                             </div>
                             <p className={styles.privacyagree}>
                                 Die <a href="https://power.cloud/datenschutz/"
