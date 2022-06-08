@@ -1,25 +1,20 @@
-import Stats from "./components/Stats/Stats";
-import Contact from "./components/Contact/Contact";
-import CardContainer from './components/CardContainer/CardContainer';
-import Title from "./Components/Title/Title";
+import ContactForm from "./Components/ContactForm";
+import useContacts from "./Components/useContacts";
+import DataSent from "./Components/DataSent";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <Stats />
-      <h1>Hello World!</h1>
-        <Contact
-            heading={"Jetzt Kontakt aufnehmen!"}
-            text={"Du willst dein Energieunternehmen intelligent digitalisieren oder willst unser Partner werden oder hast einfach nur eine Frage oder ein Anliegen? Nimm Kontakt mit uns auf, wir melden uns umgehend bei dir."}
-            buttonLink={"#contactform"}
-            buttonText={"Zum Kontaktformular"}
-            bgImgUrl={"https://power.cloud/wp-content/uploads/2020/08/pc-home-kontakt.jpg"}/>
-        <CardContainer/>
-        <div className="Title">
-          <Title text = "Die führende SaaS Plattform der Energiewirtschaft für Mid- und Backoffice-Prozesse." />
-        </div>
-    </div>
-  );
+    const [contacts, addContact] = useContacts();
+    return (
+        <Router>
+            <div className="App">
+                <Routes>
+                    <Route path="/" element={<ContactForm sendDataOnSubmit={addContact}/>} />
+                    <Route path="/datasent" element={<DataSent />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
