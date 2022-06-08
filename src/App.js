@@ -18,13 +18,13 @@ function App() {
         <div className="App">
             <NavBar/>
             <Routes>
-                <Route path="/home" element={<Home/>}/>
+                <Route index path="/" element={<Home/>}/>
                 <Route path="/demo" element={<Demo/>}/>
                 <Route path="/eworld" element={<Eworld/>}/>
                 <Route path="/lösungen" element={<Lösungen/>}/>
                 <Route path="/partner" element={<Partner/>}/>
                 <Route path="/plattform" element={<Plattform/>}/>
-                <Route path="/" element={<ContactForm sendDataOnSubmit={addContact}/>}/>
+                <Route path="/kontakt" element={<ContactForm sendDataOnSubmit={addContact}/>}/>
                 <Route path="/datasent" element={<DataSent/>}/>
             </Routes>
             <Footer/>
