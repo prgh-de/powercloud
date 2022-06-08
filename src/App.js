@@ -9,25 +9,27 @@ import Demo from "./Pages/Demo";
 import ContactForm from "./Components/ContactForm";
 import useContacts from "./Components/useContacts";
 import DataSent from "./Components/DataSent";
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Footer from "./components/Footer/Footer";
+import {Route, Routes} from "react-router-dom";
 
 function App() {
     const [contacts, addContact] = useContacts();
-  return (
-      <div className="App">
-        <NavBar/>
-        <Routes>
-            <Route path="/home" element={<Home/>}/>
-            <Route path="/demo" element={<Demo/>}/>
-            <Route path="/eworld" element={<Eworld/>}/>
-            <Route path="/lösungen" element={<Lösungen/>}/>
-            <Route path="/partner" element={<Partner/>}/>
-            <Route path="/plattform" element={<Plattform/>}/>
-            <Route path="/" element={<ContactForm sendDataOnSubmit={addContact}/>} />
-            <Route path="/datasent" element={<DataSent />} />
-        </Routes>
-      </div>
-  );
+    return (
+        <div className="App">
+            <NavBar/>
+            <Routes>
+                <Route path="/home" element={<Home/>}/>
+                <Route path="/demo" element={<Demo/>}/>
+                <Route path="/eworld" element={<Eworld/>}/>
+                <Route path="/lösungen" element={<Lösungen/>}/>
+                <Route path="/partner" element={<Partner/>}/>
+                <Route path="/plattform" element={<Plattform/>}/>
+                <Route path="/" element={<ContactForm sendDataOnSubmit={addContact}/>}/>
+                <Route path="/datasent" element={<DataSent/>}/>
+            </Routes>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;
