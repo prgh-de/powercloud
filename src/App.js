@@ -1,4 +1,3 @@
-import { Routes, Route } from "react-router-dom";
 import NavBar from "./Components/NavBar";
 import Contact from "./Pages/Demo";
 import Home from "./Pages/Home";
@@ -7,9 +6,13 @@ import Eworld from "./Pages/Eworld";
 import Lösungen from "./Pages/Lösungen";
 import Plattform from "./Pages/Plattform";
 import Demo from "./Pages/Demo";
-import {BrowserRouter} from "react-router-dom";
+import ContactForm from "./Components/ContactForm";
+import useContacts from "./Components/useContacts";
+import DataSent from "./Components/DataSent";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 function App() {
+    const [contacts, addContact] = useContacts();
   return (
       <div className="App">
         <NavBar/>
@@ -20,6 +23,8 @@ function App() {
             <Route path="/lösungen" element={<Lösungen/>}/>
             <Route path="/partner" element={<Partner/>}/>
             <Route path="/plattform" element={<Plattform/>}/>
+            <Route path="/" element={<ContactForm sendDataOnSubmit={addContact}/>} />
+            <Route path="/datasent" element={<DataSent />} />
         </Routes>
       </div>
   );
