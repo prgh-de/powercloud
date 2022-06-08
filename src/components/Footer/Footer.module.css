@@ -1,0 +1,139 @@
+.container
+.powercloud {
+    padding: 4rem 0 4rem 0;
+    margin-left: 2rem;
+}
+
+.footerMenu {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    font-size: 11px;
+    height: 3rem;
+    min-height: 60px;
+    background-color: black;
+
+    margin-left: 11px;
+    margin-right: 11px;
+    font-family: AvenirNext,HelveticaNeue,Helvetica Neue,Helvetica-Neue,helvetica,arial,sans-serif;
+    font-weight: 600;
+    color: #ffcc12;
+}
+
+.copyright {
+    grid-column-start: 2;
+    display: grid;
+    align-items: center;
+    color: white;
+}
+
+.legals {
+
+    grid-column-start: 4;
+    display: flex;
+    align-items: center;
+
+    gap: 4rem;
+}
+.textLink{
+    color: #ffcc12;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+
+.textLink a {
+    position: relative;
+    /*color: #ffcc12;*/
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/*.textLink a:hover {*/
+/*    color: rgb(247, 204, 59);*/
+/*}*/
+
+.textLink a::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(247, 204, 59);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.textLink a:hover::before {
+    transform: scaleX(1);
+}
+
+
+.socials {
+    /*display: grid;*/
+    /*grid-template-columns: repeat(6, 1fr);*/
+    /*padding: 0 3rem 0 3rem;*/
+    grid-column-start: 5;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 0 2rem 0 2rem;
+
+    /*background-color: cadetblue;*/
+}
+
+.socials .icon:hover{
+    /*top: 50px;*/
+    /*width: 42px;*/
+    /*height: 21px;*/
+    /*background-color: lightcyan;*/
+    animation: popout 0.2s ease;
+}
+
+.socialItem{
+    display: grid;
+    /*width: min-content;*/
+    width: 21px;
+    height: 21px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    top: 0px;
+    width: 21px;
+    height: 21px;
+    min-height: 21px;
+
+}
+
+@keyframes popout {
+    from{transform:scale(1)}
+    to {transform:scale(1.02)}
+}
+
+.icon {
+
+    /*width: 21px;*/
+    /*height: 21px;*/
+    /*padding: 0.5rem;*/
+
+    /*top: 0;*/
+    /*width: 21px;*/
+    /*height: 21px;*/
+    /*!*min-height: 21px;*!*/
+    /*background-color: #fdca10 !important;*/
+    /*!*border-radius: 3px;*!*/
+    color: #000;
+    font-size: 16px;
+    /*line-height: 21px;*/
+
+}
+.square{
+    color: #fdca10 !important;
+    /*width: 21px;*/
+    height: 21px;
+}
