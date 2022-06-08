@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+.DataSent {
+    font-family: Raleway, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 50px;
+    display: flex;
+    text-align: center;
+    line-height: 200%;
+}
+.container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1310px;
+    padding: 40px 160px;
+    box-shadow: 0 11px 27px 0 rgba(25,25,68,.15);
+    justify-content: center;
+    align-content: center;
+
+}
