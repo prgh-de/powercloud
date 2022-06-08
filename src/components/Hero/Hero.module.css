@@ -1,0 +1,64 @@
+@font-face {
+    font-family: Raleway;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/raleway/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoorCIPrE.woff2");
+}
+@font-face {
+    font-family: AvenirNext;
+    src: url("https://power.cloud/wp-content/themes/powercloud/fonts/avenir-next/AvenirNextLTPro-Regular.otf");
+}
+
+.heroContainer {
+    background-repeat: no-repeat;
+    background-image: url(https://power.cloud/wp-content/uploads/2022/03/Website_Homepager_Banner-on-Y_2048-900-1.png);
+    background-attachment: scroll;
+    background-position: center center;
+    max-height: 844px;
+    min-height: 100px;
+    background-size: cover;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    height: 580px;
+    width: 100%;
+    max-width: 1310px;
+    max-height: 844px;
+    margin: 0 auto;
+}
+.innerContainer {
+    height: 100%;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+}
+.headlineTitle {
+    font-family: Raleway,HelveticaNeue,Helvetica Neue,Helvetica-Neue,helvetica,arial,sans-serif;;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 1.29;
+    white-space: pre-line;
+    margin: 0;
+}
+.bodyText {
+    font-family: AvenirNext, HelveticaNeue, Helvetica Neue, Helvetica-Neue, helvetica, arial, sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+    white-space: pre-line;
+    margin-top: 32px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        height: 432px;
+    }
+    .innerContainer {
+        padding: 0 16px;
+    }
+    .headlineTitle {
+        font-size: 28px;
+    }
+    .bodyText {
+        font-size: 16px;
+    }
+}
