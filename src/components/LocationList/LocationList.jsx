@@ -9,7 +9,7 @@ export default function LocationList() {
 
     useEffect(() => {
 
-        fetch('http://localhost:4000/location', {
+        fetch('https://localhost/locations/all', {
             method: 'GET', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export default function LocationList() {
                 console.error('Error:', error);
             });
     }, []);
-
+console.log(locations);
     return (
             <div className={styles.container}>
                 {locations.map((location, i) => (
