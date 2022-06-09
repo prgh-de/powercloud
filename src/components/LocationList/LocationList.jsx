@@ -17,7 +17,7 @@ export default function LocationList() {
         })
             .then(response => response.json())
             .then(data => {
-                setLocation(data);
+                setLocation(data.location);
                 console.log('Success:', data);
             })
             .catch((error) => {
