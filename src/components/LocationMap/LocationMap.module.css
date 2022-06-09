@@ -1,5 +1,6 @@
 .container {
     margin: 0 auto;
+    margin-bottom: 50px;
     max-width: 1310px;
     padding: 40px;
     box-shadow: 0 11px 27px 0 rgba(25,25,68,.15);
