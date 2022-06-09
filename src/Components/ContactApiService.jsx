@@ -4,7 +4,7 @@ export async function addContactToApi(contact) {
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ id: new Date(), ...contact }),
+        body: JSON.stringify(contact),
     });
     const data = await httpResponse.json();
 
