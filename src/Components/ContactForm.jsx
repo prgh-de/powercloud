@@ -66,7 +66,7 @@ export default function ContactForm({sendDataOnSubmit}) {
                     email: formData.email,
                     telephonenumber: formData.phone,
                     message: formData.message,
-                    callbackperiod: formData.callback,
+                    callbackperiode: formData.callback,
                     newsletter: formData.newsletter,
                     informationprivacy: formData.privacy
                 });
