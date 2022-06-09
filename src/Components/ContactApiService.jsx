@@ -1,5 +1,5 @@
 export async function addContactToApi(contact) {
-    const httpResponse = await fetch('http://localhost:4000/contacts', {
+    const httpResponse = await fetch('https://localhost/contact', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
