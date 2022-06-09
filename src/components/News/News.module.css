@@ -10,12 +10,10 @@ font-face {
     font-family: AvenirNextBold;
     src: url("https://power.cloud/wp-content/themes/powercloud/fonts/avenir-next/AvenirNextLTPro-Bold.otf");
 }
-body,html {
-    background-color: #FFFFFF;
-}
+
 .container {
     max-width: 1310px;
-    max-height: 844px;
+    height: 1120px;
     margin: 0 auto;
     padding-top: 80px;
     padding-bottom: 80px;
