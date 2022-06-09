@@ -32,6 +32,12 @@ export default function NavBar() {
                 <li>
                     <Link onClick={() => setToogle(false)} to="/plattform">Plattform</Link>
                 </li>
+                <li>
+                    <Link onClick={() => setToogle(false)} to="/kontakt">Kontakt</Link>
+                </li>
+                <li>
+                    <Link onClick={() => setToogle(false)} to="/location">Standorte</Link>
+                </li>
             </ul>
             <div onClick={toogleHandler} className="toogle-button">
                 <i className={toogle? "fas fa-times" : "fas fa-bars"}></i>
