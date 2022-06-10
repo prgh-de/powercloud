@@ -1,7 +1,7 @@
 import styles from './Hero.module.css';
 import PropTypes from 'prop-types';
 
-export default function Hero({title, bodyText}) {
+export default function Hero({title='10 Jahre powercloud – 10 Jahre Energie (R)Evolution.', bodyText = 'Gemeinsam mit unseren Kunden und Partnern schaffen wir die Billing-Plattform der Zukunft. Und das ist erst der Anfang.'}) {
     return (
         <div className={styles.heroContainer}>
             <div className={styles.container}>
