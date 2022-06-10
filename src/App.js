@@ -6,6 +6,7 @@ import Eworld from "./Pages/Eworld";
 import Lösungen from "./Pages/Lösungen";
 import Plattform from "./Pages/Plattform";
 import Demo from "./Pages/Demo";
+import Locations from "./Pages/Locations";
 import ContactForm from "./Components/ContactForm";
 import useContacts from "./Components/useContacts";
 import DataSent from "./Components/DataSent";
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/plattform" element={<Plattform/>}/>
                 <Route path="/kontakt" element={<ContactForm sendDataOnSubmit={addContact}/>}/>
                 <Route path="/datasent" element={<DataSent/>}/>
+                <Route path="/locations" element={<Locations/>}/>
             </Routes>
             <Footer/>
         </div>
