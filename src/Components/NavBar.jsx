@@ -15,7 +15,7 @@ export default function NavBar() {
             </div>
             <ul className={toogle? "active" : ""}>
                 <li>
-                    <Link onClick={() => setToogle(false)} to="/home">AUF EINEN BLICK</Link>
+                    <Link onClick={() => setToogle(false)} to="/">AUF EINEN BLICK</Link>
                 </li>
                 <li>
                     <Link onClick={() => setToogle(false)} to="/demo">Demo</Link>
