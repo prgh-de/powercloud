@@ -40,6 +40,9 @@ ul li a:hover::after {
     height: 155%;
     width: 121%;
 }
+ul li a:visited {
+    color: #000000;
+}
 .toogle-button {
     display: none;
     font-size: 1.8rem;
