@@ -57,10 +57,10 @@ ul li a:visited {
     color: #000;
     border: #000;
     height: 5px;
-    width: 58px;
+    width: 52px;
     position: absolute;
-    top: 21px;
-    left: 225px;
+    top: 12px;
+    left: 206px;
 }
 @media screen and (max-width: 900px ){
     .toogle-button {
