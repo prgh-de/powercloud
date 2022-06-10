@@ -18,13 +18,13 @@ export default function LocationList() {
             .then(response => response.json())
             .then(data => {
                 setLocation(data.location);
-                console.log('Success:', data);
+                //console.log('Success:', data);
             })
             .catch((error) => {
-                console.error('Error:', error);
+                //console.error('Error:', error);
             });
     }, []);
-console.log(locations);
+
     return (
             <div className={styles.container}>
                 {locations.map((location, i) => (
